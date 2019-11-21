@@ -9,14 +9,14 @@ function App() {
       storageBucket: "sofakingwasted-e795e.appspot.com",
       projectId: "sofakingwasted-e793e"
     }).storage()
-    : firebase.app().firestore();
-  let shelf_image = storage.ref().refFromURL('assets/shelf.png');
+    : firebase.app().storage();
+  let shelf_img = storage.ref('assets/shelf.png').fullPath;
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <img src={shelf_image} alt="shelf" />
+        <img src={shelf_img} alt="shelf" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
